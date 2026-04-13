@@ -13,6 +13,8 @@ const LOCALES = {
     "nav.uuid": "UUID",
     "nav.jwt": "JWT Decode",
     "nav.utilities": "Utilities",
+    "nav.brasil": "🇧🇷 Brasil",
+    "nav.brasil_docs": "CPF / CNPJ",
     "nav.timestamp": "Timestamp",
     "nav.color": "Color",
     "nav.lorem": "Lorem Ipsum",
@@ -48,9 +50,11 @@ const LOCALES = {
     "tool.diff.desc": "// compare two texts line by line",
     "tool.counter.title": "🔢 Text Counter",
     "tool.counter.desc": "// words, characters, lines and more",
+    "tool.brasil.title": "🇧🇷 CPF / CNPJ",
+    "tool.brasil.desc": "// generate valid Brazilian CPF and CNPJ numbers",
 
     // Home panel
-    "home.subtitle": "// 14 tools for your everyday dev workflow",
+    "home.subtitle": "// 15 tools for your everyday dev workflow",
     "home.base64.desc": "Encode and decode Base64",
     "home.url.desc": "Encode and decode URLs",
     "home.json.desc": "Format and validate JSON",
@@ -63,6 +67,7 @@ const LOCALES = {
     "home.color.desc": "HEX, RGB, HSL converter",
     "home.lorem.desc": "Placeholder text generator",
     "home.diff.desc": "Compare two texts",
+    "home.brasil.desc": "Brazilian document generator",
 
     // Common
     "common.copy": "copy",
@@ -172,6 +177,13 @@ const LOCALES = {
     "diff.noDifferences": "no differences",
     "diff.originalPlaceholder": "Original text...",
     "diff.modifiedPlaceholder": "Modified text...",
+
+    // Brasil
+    "brasil.withPunct": "With punctuation",
+    "cpf.quantityLabel": "Quantity",
+    "cpf.generate": "Generate CPFs",
+    "cnpj.quantityLabel": "Quantity",
+    "cnpj.generate": "Generate CNPJs",
 
     // Counter
     "counter.inputLabel": "Text to analyze",

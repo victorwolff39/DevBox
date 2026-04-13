@@ -384,6 +384,10 @@
   }
   .case-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
   .case-value { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text); word-break: break-all; }
+
+  /* DOC PUNCT TOGGLE */
+  .punct-toggle { display: flex; align-items: center; gap: 8px; margin: 12px 0 4px; font-size: 12px; color: var(--muted); cursor: pointer; user-select: none; }
+  .punct-toggle input[type="checkbox"] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -415,6 +419,9 @@
     <div class="nav-item" onclick="show('lorem', this)"><span class="icon">📝</span> <span data-i18n="nav.lorem">Lorem Ipsum</span></div>
     <div class="nav-item" onclick="show('diff', this)"><span class="icon">⚡</span> <span data-i18n="nav.diff">Text Diff</span></div>
     <div class="nav-item" onclick="show('counter', this)"><span class="icon">🔢</span> <span data-i18n="nav.counter">Counter</span></div>
+
+    <div class="nav-group-label" data-i18n="nav.brasil">🇧🇷 Brasil</div>
+    <div class="nav-item" onclick="show('brasil', this)"><span class="icon">🪪</span> <span data-i18n="nav.brasil_docs">CPF / CNPJ</span></div>
   </nav>
 </aside>
 
@@ -429,7 +436,7 @@
   <div class="content">
 
     <div class="panel active" id="panel-home">
-      <p style="color:var(--muted);font-size:13px;margin-bottom:24px;font-family:'JetBrains Mono',monospace;" data-i18n="home.subtitle">// 14 tools for your everyday dev workflow</p>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:24px;font-family:'JetBrains Mono',monospace;" data-i18n="home.subtitle">// 15 tools for your everyday dev workflow</p>
       <div class="home-cards">
         <div class="home-card" onclick="show('base64',null)"><div class="home-card-icon">🔤</div><div class="home-card-title" data-i18n="nav.base64">Base64</div><div class="home-card-desc" data-i18n="home.base64.desc">Encode and decode Base64</div></div>
         <div class="home-card" onclick="show('url',null)"><div class="home-card-icon">🔗</div><div class="home-card-title" data-i18n="nav.url">URL Encode</div><div class="home-card-desc" data-i18n="home.url.desc">Encode and decode URLs</div></div>
@@ -443,6 +450,7 @@
         <div class="home-card" onclick="show('color',null)"><div class="home-card-icon">🎨</div><div class="home-card-title" data-i18n="nav.color">Color</div><div class="home-card-desc" data-i18n="home.color.desc">HEX, RGB, HSL converter</div></div>
         <div class="home-card" onclick="show('lorem',null)"><div class="home-card-icon">📝</div><div class="home-card-title" data-i18n="nav.lorem">Lorem Ipsum</div><div class="home-card-desc" data-i18n="home.lorem.desc">Placeholder text generator</div></div>
         <div class="home-card" onclick="show('diff',null)"><div class="home-card-icon">⚡</div><div class="home-card-title" data-i18n="nav.diff">Text Diff</div><div class="home-card-desc" data-i18n="home.diff.desc">Compare two texts</div></div>
+        <div class="home-card" onclick="show('brasil',null)"><div class="home-card-icon">🇧🇷</div><div class="home-card-title" data-i18n="nav.brasil_docs">CPF / CNPJ</div><div class="home-card-desc" data-i18n="home.brasil.desc">Brazilian document generator</div></div>
       </div>
     </div>
 
@@ -648,12 +656,39 @@
       <div class="grid-3" id="counter-results" style="margin-top:16px"></div>
     </div>
 
+    <div class="panel" id="panel-brasil">
+      <div class="tabs">
+        <div class="tab active" id="brasil-cpf-tab" onclick="switchTab('brasil','cpf')">CPF</div>
+        <div class="tab" id="brasil-cnpj-tab" onclick="switchTab('brasil','cnpj')">CNPJ</div>
+      </div>
+      <div id="brasil-cpf">
+        <div class="card-label" data-i18n="cpf.quantityLabel">Quantity</div>
+        <input type="number" id="cpf-qty" value="1" min="1" max="20" style="width:120px;resize:none">
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="doCpf()">⚡ <span data-i18n="cpf.generate">Generate CPFs</span></button>
+          <button class="btn btn-secondary" onclick="document.getElementById('cpf-list').innerHTML=''" data-i18n="common.clear">Clear</button>
+        </div>
+        <label class="punct-toggle"><input type="checkbox" id="cpf-punct" checked> <span data-i18n="brasil.withPunct">Com pontuação</span></label>
+        <div class="uuid-list" id="cpf-list"></div>
+      </div>
+      <div id="brasil-cnpj" style="display:none">
+        <div class="card-label" data-i18n="cnpj.quantityLabel">Quantity</div>
+        <input type="number" id="cnpj-qty" value="1" min="1" max="20" style="width:120px;resize:none">
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="doCnpj()">⚡ <span data-i18n="cnpj.generate">Generate CNPJs</span></button>
+          <button class="btn btn-secondary" onclick="document.getElementById('cnpj-list').innerHTML=''" data-i18n="common.clear">Clear</button>
+        </div>
+        <label class="punct-toggle"><input type="checkbox" id="cnpj-punct" checked> <span data-i18n="brasil.withPunct">With punctuation</span></label>
+        <div class="uuid-list" id="cnpj-list"></div>
+      </div>
+    </div>
+
   </div>
 </div>
 
 <script src="locales.js"></script>
 <script>
-const toolKeys = ['home','base64','url','json','case','regex','hash','uuid','jwt','timestamp','color','lorem','diff','counter'];
+const toolKeys = ['home','base64','url','json','case','regex','hash','uuid','jwt','timestamp','color','lorem','diff','counter','brasil'];
 
 let currentTool = 'home';
 
@@ -685,6 +720,9 @@ function switchTab(tool, mode) {
   } else if (tool === 'url') {
     document.getElementById('url-enc').style.display = mode === 'enc' ? 'block' : 'none';
     document.getElementById('url-dec').style.display = mode === 'dec' ? 'block' : 'none';
+  } else if (tool === 'brasil') {
+    document.getElementById('brasil-cpf').style.display = mode === 'cpf' ? 'block' : 'none';
+    document.getElementById('brasil-cnpj').style.display = mode === 'cnpj' ? 'block' : 'none';
   }
 }
 
@@ -897,6 +935,58 @@ function doUuid() {
       return v.toString(16);
     });
     list.innerHTML += `<div class="uuid-item" onclick="navigator.clipboard.writeText('${u}');this.style.color='var(--text)';setTimeout(()=>this.style.color='',800)">${u}</div>`;
+  }
+}
+
+// CPF / CNPJ
+function copyDoc(el, formatted, raw, checkboxId) {
+  const withPunct = document.getElementById(checkboxId).checked;
+  navigator.clipboard.writeText(withPunct ? formatted : raw);
+  el.style.color = 'var(--text)';
+  setTimeout(() => el.style.color = '', 800);
+}
+function genCpfDigits() {
+  const d = Array.from({length: 9}, () => Math.floor(Math.random() * 10));
+  const calc = (digits, factor) => {
+    const sum = digits.reduce((acc, n, i) => acc + n * (factor - i), 0);
+    const rem = sum % 11;
+    return rem < 2 ? 0 : 11 - rem;
+  };
+  d.push(calc(d, 10));
+  d.push(calc(d, 11));
+  return d.join('');
+}
+function doCpf() {
+  const qty = Math.min(20, Math.max(1, parseInt(document.getElementById('cpf-qty').value)||1));
+  const list = document.getElementById('cpf-list');
+  list.innerHTML = '';
+  for (let i = 0; i < qty; i++) {
+    const raw = genCpfDigits();
+    const fmt = `${raw.slice(0,3)}.${raw.slice(3,6)}.${raw.slice(6,9)}-${raw.slice(9)}`;
+    list.innerHTML += `<div class="uuid-item" onclick="copyDoc(this,'${fmt}','${raw}','cpf-punct')">${fmt}</div>`;
+  }
+}
+function genCnpjDigits() {
+  const d = Array.from({length: 8}, () => Math.floor(Math.random() * 10));
+  d.push(0, 0, 0, 1);
+  const calc = (digits, weights) => {
+    const sum = digits.reduce((acc, n, i) => acc + n * weights[i], 0);
+    const rem = sum % 11;
+    return rem < 2 ? 0 : 11 - rem;
+  };
+  const d1 = calc(d, [5,4,3,2,9,8,7,6,5,4,3,2]);
+  const d2 = calc([...d, d1], [6,5,4,3,2,9,8,7,6,5,4,3,2]);
+  d.push(d1, d2);
+  return d.join('');
+}
+function doCnpj() {
+  const qty = Math.min(20, Math.max(1, parseInt(document.getElementById('cnpj-qty').value)||1));
+  const list = document.getElementById('cnpj-list');
+  list.innerHTML = '';
+  for (let i = 0; i < qty; i++) {
+    const raw = genCnpjDigits();
+    const fmt = `${raw.slice(0,2)}.${raw.slice(2,5)}.${raw.slice(5,8)}/${raw.slice(8,12)}-${raw.slice(12)}`;
+    list.innerHTML += `<div class="uuid-item" onclick="copyDoc(this,'${fmt}','${raw}','cnpj-punct')">${fmt}</div>`;
   }
 }
 
