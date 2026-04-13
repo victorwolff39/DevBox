@@ -396,143 +396,141 @@
     <div class="logo-sub">v1.0 · dev tools</div>
   </div>
   <nav class="nav">
-    <div class="nav-group-label">Home</div>
-    <div class="nav-item active" onclick="show('home', this)"><span class="icon">🏠</span> Home</div>
+    <div class="nav-group-label" data-i18n="nav.home">Home</div>
+    <div class="nav-item active" onclick="show('home', this)"><span class="icon">🏠</span> <span data-i18n="nav.home">Home</span></div>
 
-    <div class="nav-group-label">Text & Code</div>
-    <div class="nav-item" onclick="show('base64', this)"><span class="icon">🔤</span> Base64</div>
-    <div class="nav-item" onclick="show('url', this)"><span class="icon">🔗</span> URL Encode</div>
-    <div class="nav-item" onclick="show('json', this)"><span class="icon">{ }</span> JSON Format</div>
-    <div class="nav-item" onclick="show('case', this)"><span class="icon">Aa</span> Case Converter</div>
-    <div class="nav-item" onclick="show('regex', this)"><span class="icon">.*</span> Regex Tester</div>
+    <div class="nav-group-label" data-i18n="nav.textCode">Text & Code</div>
+    <div class="nav-item" onclick="show('base64', this)"><span class="icon">🔤</span> <span data-i18n="nav.base64">Base64</span></div>
+    <div class="nav-item" onclick="show('url', this)"><span class="icon">🔗</span> <span data-i18n="nav.url">URL Encode</span></div>
+    <div class="nav-item" onclick="show('json', this)"><span class="icon">{ }</span> <span data-i18n="nav.json">JSON Format</span></div>
+    <div class="nav-item" onclick="show('case', this)"><span class="icon">Aa</span> <span data-i18n="nav.case">Case Converter</span></div>
+    <div class="nav-item" onclick="show('regex', this)"><span class="icon">.*</span> <span data-i18n="nav.regex">Regex Tester</span></div>
 
-    <div class="nav-group-label">Hash & Security</div>
-    <div class="nav-item" onclick="show('hash', this)"><span class="icon">🔐</span> Hash</div>
-    <div class="nav-item" onclick="show('uuid', this)"><span class="icon">🆔</span> UUID</div>
-    <div class="nav-item" onclick="show('jwt', this)"><span class="icon">🪙</span> JWT Decode</div>
+    <div class="nav-group-label" data-i18n="nav.hashSecurity">Hash & Security</div>
+    <div class="nav-item" onclick="show('hash', this)"><span class="icon">🔐</span> <span data-i18n="nav.hash">Hash</span></div>
+    <div class="nav-item" onclick="show('uuid', this)"><span class="icon">🆔</span> <span data-i18n="nav.uuid">UUID</span></div>
+    <div class="nav-item" onclick="show('jwt', this)"><span class="icon">🪙</span> <span data-i18n="nav.jwt">JWT Decode</span></div>
 
-    <div class="nav-group-label">Utilities</div>
-    <div class="nav-item" onclick="show('timestamp', this)"><span class="icon">⏱</span> Timestamp</div>
-    <div class="nav-item" onclick="show('color', this)"><span class="icon">🎨</span> Cor</div>
-    <div class="nav-item" onclick="show('lorem', this)"><span class="icon">📝</span> Lorem Ipsum</div>
-    <div class="nav-item" onclick="show('diff', this)"><span class="icon">⚡</span> Text Diff</div>
-    <div class="nav-item" onclick="show('counter', this)"><span class="icon">🔢</span> Contador</div>
+    <div class="nav-group-label" data-i18n="nav.utilities">Utilities</div>
+    <div class="nav-item" onclick="show('timestamp', this)"><span class="icon">⏱</span> <span data-i18n="nav.timestamp">Timestamp</span></div>
+    <div class="nav-item" onclick="show('color', this)"><span class="icon">🎨</span> <span data-i18n="nav.color">Color</span></div>
+    <div class="nav-item" onclick="show('lorem', this)"><span class="icon">📝</span> <span data-i18n="nav.lorem">Lorem Ipsum</span></div>
+    <div class="nav-item" onclick="show('diff', this)"><span class="icon">⚡</span> <span data-i18n="nav.diff">Text Diff</span></div>
+    <div class="nav-item" onclick="show('counter', this)"><span class="icon">🔢</span> <span data-i18n="nav.counter">Counter</span></div>
   </nav>
 </aside>
 
 <div class="main">
   <div class="topbar">
     <div>
-      <div class="tool-title" id="topTitle">🏠 Welcome to Alerok's DevBox</div>
-      <div class="tool-desc" id="topDesc">// select a tool from the sidebar</div>
+      <div class="tool-title" id="topTitle" data-i18n="tool.home.title">🏠 Alerok's DevBox</div>
+      <div class="tool-desc" id="topDesc" data-i18n="tool.home.desc">// select a tool from the sidebar</div>
     </div>
   </div>
 
   <div class="content">
 
     <div class="panel active" id="panel-home">
-      <p style="color:var(--muted);font-size:13px;margin-bottom:24px;font-family:'JetBrains Mono',monospace;">// 14 tools for your everyday dev workflow</p>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:24px;font-family:'JetBrains Mono',monospace;" data-i18n="home.subtitle">// 14 tools for your everyday dev workflow</p>
       <div class="home-cards">
-        <div class="home-card" onclick="show('base64',null)"><div class="home-card-icon">🔤</div><div class="home-card-title">Base64</div><div class="home-card-desc">Encode and decode Base64</div></div>
-        <div class="home-card" onclick="show('url',null)"><div class="home-card-icon">🔗</div><div class="home-card-title">URL Encode</div><div class="home-card-desc">Encode and decode URLs</div></div>
-        <div class="home-card" onclick="show('json',null)"><div class="home-card-icon">{ }</div><div class="home-card-title">JSON Format</div><div class="home-card-desc">Format and validate JSON</div></div>
-        <div class="home-card" onclick="show('case',null)"><div class="home-card-icon">Aa</div><div class="home-card-title">Case Converter</div><div class="home-card-desc">camelCase, snake_case and more</div></div>
-        <div class="home-card" onclick="show('regex',null)"><div class="home-card-icon">.*</div><div class="home-card-title">Regex Tester</div><div class="home-card-desc">Test regular expressions</div></div>
-        <div class="home-card" onclick="show('hash',null)"><div class="home-card-icon">🔐</div><div class="home-card-title">Hash</div><div class="home-card-desc">MD5, SHA-1, SHA-256</div></div>
-        <div class="home-card" onclick="show('uuid',null)"><div class="home-card-icon">🆔</div><div class="home-card-title">UUID</div><div class="home-card-desc">UUID v4 generator</div></div>
-        <div class="home-card" onclick="show('jwt',null)"><div class="home-card-icon">🪙</div><div class="home-card-title">JWT Decode</div><div class="home-card-desc">Decode JWT tokens</div></div>
-        <div class="home-card" onclick="show('timestamp',null)"><div class="home-card-icon">⏱</div><div class="home-card-title">Timestamp</div><div class="home-card-desc">Convert Unix timestamps</div></div>
-        <div class="home-card" onclick="show('color',null)"><div class="home-card-icon">🎨</div><div class="home-card-title">Color</div><div class="home-card-desc">HEX, RGB, HSL converter</div></div>
-        <div class="home-card" onclick="show('lorem',null)"><div class="home-card-icon">📝</div><div class="home-card-title">Lorem Ipsum</div><div class="home-card-desc">Placeholder text generator</div></div>
-        <div class="home-card" onclick="show('diff',null)"><div class="home-card-icon">⚡</div><div class="home-card-title">Text Diff</div><div class="home-card-desc">Compare two texts</div></div>
+        <div class="home-card" onclick="show('base64',null)"><div class="home-card-icon">🔤</div><div class="home-card-title" data-i18n="nav.base64">Base64</div><div class="home-card-desc" data-i18n="home.base64.desc">Encode and decode Base64</div></div>
+        <div class="home-card" onclick="show('url',null)"><div class="home-card-icon">🔗</div><div class="home-card-title" data-i18n="nav.url">URL Encode</div><div class="home-card-desc" data-i18n="home.url.desc">Encode and decode URLs</div></div>
+        <div class="home-card" onclick="show('json',null)"><div class="home-card-icon">{ }</div><div class="home-card-title" data-i18n="nav.json">JSON Format</div><div class="home-card-desc" data-i18n="home.json.desc">Format and validate JSON</div></div>
+        <div class="home-card" onclick="show('case',null)"><div class="home-card-icon">Aa</div><div class="home-card-title" data-i18n="nav.case">Case Converter</div><div class="home-card-desc" data-i18n="home.case.desc">camelCase, snake_case and more</div></div>
+        <div class="home-card" onclick="show('regex',null)"><div class="home-card-icon">.*</div><div class="home-card-title" data-i18n="nav.regex">Regex Tester</div><div class="home-card-desc" data-i18n="home.regex.desc">Test regular expressions</div></div>
+        <div class="home-card" onclick="show('hash',null)"><div class="home-card-icon">🔐</div><div class="home-card-title" data-i18n="nav.hash">Hash</div><div class="home-card-desc" data-i18n="home.hash.desc">MD5, SHA-1, SHA-256</div></div>
+        <div class="home-card" onclick="show('uuid',null)"><div class="home-card-icon">🆔</div><div class="home-card-title" data-i18n="nav.uuid">UUID</div><div class="home-card-desc" data-i18n="home.uuid.desc">UUID v4 generator</div></div>
+        <div class="home-card" onclick="show('jwt',null)"><div class="home-card-icon">🪙</div><div class="home-card-title" data-i18n="nav.jwt">JWT Decode</div><div class="home-card-desc" data-i18n="home.jwt.desc">Decode JWT tokens</div></div>
+        <div class="home-card" onclick="show('timestamp',null)"><div class="home-card-icon">⏱</div><div class="home-card-title" data-i18n="nav.timestamp">Timestamp</div><div class="home-card-desc" data-i18n="home.timestamp.desc">Convert Unix timestamps</div></div>
+        <div class="home-card" onclick="show('color',null)"><div class="home-card-icon">🎨</div><div class="home-card-title" data-i18n="nav.color">Color</div><div class="home-card-desc" data-i18n="home.color.desc">HEX, RGB, HSL converter</div></div>
+        <div class="home-card" onclick="show('lorem',null)"><div class="home-card-icon">📝</div><div class="home-card-title" data-i18n="nav.lorem">Lorem Ipsum</div><div class="home-card-desc" data-i18n="home.lorem.desc">Placeholder text generator</div></div>
+        <div class="home-card" onclick="show('diff',null)"><div class="home-card-icon">⚡</div><div class="home-card-title" data-i18n="nav.diff">Text Diff</div><div class="home-card-desc" data-i18n="home.diff.desc">Compare two texts</div></div>
       </div>
     </div>
 
     <div class="panel" id="panel-base64">
       <div class="tabs">
-        <div class="tab active" id="b64-enc-tab" onclick="switchTab('b64','enc')">Encode</div>
-        <div class="tab" id="b64-dec-tab" onclick="switchTab('b64','dec')">Decode</div>
+        <div class="tab active" id="b64-enc-tab" onclick="switchTab('b64','enc')" data-i18n="common.encode">Encode</div>
+        <div class="tab" id="b64-dec-tab" onclick="switchTab('b64','dec')" data-i18n="common.decode">Decode</div>
       </div>
       <div id="b64-enc">
-        <div class="card-label">Input text</div>
-        <textarea id="b64-input" rows="6" placeholder="Enter text to encode as Base64..."></textarea>
+        <div class="card-label" data-i18n="base64.inputLabel">Input text</div>
+        <textarea id="b64-input" rows="6" data-i18n-placeholder="base64.inputPlaceholder" placeholder="Enter text to encode as Base64..."></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doBase64Enc()">⚡ Encode</button>
-          <button class="btn btn-secondary" onclick="clearField('b64-input','b64-out')">Clear</button>
+          <button class="btn btn-primary" onclick="doBase64Enc()">⚡ <span data-i18n="common.encode">Encode</span></button>
+          <button class="btn btn-secondary" onclick="clearField('b64-input','b64-out')" data-i18n="common.clear">Clear</button>
         </div>
-        <div class="output" id="b64-out"><button class="copy-btn" onclick="copyOut('b64-out')">copy</button><span></span></div>
+        <div class="output" id="b64-out"><button class="copy-btn" onclick="copyOut('b64-out')" data-i18n="common.copy">copy</button><span></span></div>
       </div>
       <div id="b64-dec" style="display:none">
-        <div class="card-label">Base64 input</div>
-        <textarea id="b64-d-input" rows="6" placeholder="Paste Base64 to decode..."></textarea>
+        <div class="card-label" data-i18n="base64.encodedLabel">Base64 input</div>
+        <textarea id="b64-d-input" rows="6" data-i18n-placeholder="base64.decodePlaceholder" placeholder="Paste Base64 to decode..."></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doBase64Dec()">⚡ Decode</button>
-          <button class="btn btn-secondary" onclick="clearField('b64-d-input','b64-d-out')">Clear</button>
+          <button class="btn btn-primary" onclick="doBase64Dec()">⚡ <span data-i18n="common.decode">Decode</span></button>
+          <button class="btn btn-secondary" onclick="clearField('b64-d-input','b64-d-out')" data-i18n="common.clear">Clear</button>
         </div>
-        <div class="output" id="b64-d-out"><button class="copy-btn" onclick="copyOut('b64-d-out')">copy</button><span></span></div>
+        <div class="output" id="b64-d-out"><button class="copy-btn" onclick="copyOut('b64-d-out')" data-i18n="common.copy">copy</button><span></span></div>
       </div>
     </div>
 
     <div class="panel" id="panel-url">
       <div class="tabs">
-        <div class="tab active" id="url-enc-tab" onclick="switchTab('url','enc')">Encode</div>
-        <div class="tab" id="url-dec-tab" onclick="switchTab('url','dec')">Decode</div>
+        <div class="tab active" id="url-enc-tab" onclick="switchTab('url','enc')" data-i18n="common.encode">Encode</div>
+        <div class="tab" id="url-dec-tab" onclick="switchTab('url','dec')" data-i18n="common.decode">Decode</div>
       </div>
       <div id="url-enc">
-        <textarea id="url-input" rows="5" placeholder="https://example.com/search?q=hello world&lang=en"></textarea>
+        <textarea id="url-input" rows="5" data-i18n-placeholder="url.encodePlaceholder" placeholder="https://example.com/search?q=hello world&lang=en"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doUrlEnc()">⚡ Encode</button>
-          <button class="btn btn-secondary" onclick="clearField('url-input','url-out')">Clear</button>
+          <button class="btn btn-primary" onclick="doUrlEnc()">⚡ <span data-i18n="common.encode">Encode</span></button>
+          <button class="btn btn-secondary" onclick="clearField('url-input','url-out')" data-i18n="common.clear">Clear</button>
         </div>
-        <div class="output" id="url-out"><button class="copy-btn" onclick="copyOut('url-out')">copy</button><span></span></div>
+        <div class="output" id="url-out"><button class="copy-btn" onclick="copyOut('url-out')" data-i18n="common.copy">copy</button><span></span></div>
       </div>
       <div id="url-dec" style="display:none">
-        <textarea id="url-d-input" rows="5" placeholder="https%3A%2F%2Fexample.com%3Fq%3Dol%C3%A1%20mundo"></textarea>
+        <textarea id="url-d-input" rows="5" data-i18n-placeholder="url.decodePlaceholder" placeholder="https%3A%2F%2Fexample.com%3Fq%3Dol%C3%A1%20mundo"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doUrlDec()">⚡ Decode</button>
-          <button class="btn btn-secondary" onclick="clearField('url-d-input','url-d-out')">Clear</button>
+          <button class="btn btn-primary" onclick="doUrlDec()">⚡ <span data-i18n="common.decode">Decode</span></button>
+          <button class="btn btn-secondary" onclick="clearField('url-d-input','url-d-out')" data-i18n="common.clear">Clear</button>
         </div>
-        <div class="output" id="url-d-out"><button class="copy-btn" onclick="copyOut('url-d-out')">copy</button><span></span></div>
+        <div class="output" id="url-d-out"><button class="copy-btn" onclick="copyOut('url-d-out')" data-i18n="common.copy">copy</button><span></span></div>
       </div>
     </div>
 
     <div class="panel" id="panel-json">
-      <div class="grid-2">
-        <div>
-          <div class="card-label">JSON input</div>
-          <textarea id="json-input" rows="14" placeholder='{"name":"John","age":30,"active":true}'></textarea>
-          <div class="btn-row">
-            <button class="btn btn-primary" onclick="doJsonFormat()">⚡ Format</button>
-            <button class="btn btn-secondary" onclick="doJsonMinify()">Minify</button>
-            <button class="btn btn-secondary" onclick="clearField('json-input','json-out')">Clear</button>
-          </div>
+      <div>
+        <div class="card-label" data-i18n="json.inputLabel">JSON input</div>
+        <textarea id="json-input" rows="10" data-i18n-placeholder="json.inputPlaceholder" placeholder='{"name":"John","age":30,"active":true}'></textarea>
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="doJsonFormat()">⚡ <span data-i18n="json.format">Format</span></button>
+          <button class="btn btn-secondary" onclick="doJsonMinify()" data-i18n="json.minify">Minify</button>
+          <button class="btn btn-secondary" onclick="clearField('json-input','json-out')" data-i18n="common.clear">Clear</button>
         </div>
-        <div>
-          <div class="card-label" id="json-status-label">Output</div>
-          <div class="output" style="min-height:280px;color:var(--text)" id="json-out"><button class="copy-btn" onclick="copyOut('json-out')">copy</button><span></span></div>
-        </div>
+      </div>
+      <div style="margin-top:16px">
+        <div class="card-label" id="json-status-label" data-i18n="common.output">Output</div>
+        <div class="output" style="min-height:200px;color:var(--text)" id="json-out"><button class="copy-btn" onclick="copyOut('json-out')" data-i18n="common.copy">copy</button><span></span></div>
       </div>
     </div>
 
     <div class="panel" id="panel-case">
-      <div class="card-label">Input text</div>
-      <textarea id="case-input" rows="4" placeholder="my variable name here..." oninput="doCase()"></textarea>
+      <div class="card-label" data-i18n="case.inputLabel">Input text</div>
+      <textarea id="case-input" rows="4" data-i18n-placeholder="case.placeholder" placeholder="my variable name here..." oninput="doCase()"></textarea>
       <div class="case-grid" id="case-results"></div>
     </div>
 
     <div class="panel" id="panel-regex">
       <div style="display:flex;gap:10px;margin-bottom:14px">
         <div style="flex:1">
-          <div class="card-label">Expressão Regular</div>
+          <div class="card-label" data-i18n="regex.patternLabel">Regular Expression</div>
           <input type="text" id="regex-pattern" placeholder="^\d{2}/\d{2}/\d{4}$" oninput="doRegex()">
         </div>
         <div style="width:140px">
-          <div class="card-label">Flags</div>
+          <div class="card-label" data-i18n="regex.flagsLabel">Flags</div>
           <input type="text" id="regex-flags" placeholder="gi" maxlength="10" oninput="doRegex()" style="font-size:13px">
         </div>
       </div>
-      <div class="card-label">Test text</div>
-      <textarea id="regex-text" rows="8" placeholder="Paste your text here..." oninput="doRegex()"></textarea>
+      <div class="card-label" data-i18n="regex.testLabel">Test text</div>
+      <textarea id="regex-text" rows="8" data-i18n-placeholder="regex.testPlaceholder" placeholder="Paste your text here..." oninput="doRegex()"></textarea>
       <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
         <span id="regex-status"></span>
         <span id="regex-count" style="font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace"></span>
@@ -541,31 +539,31 @@
     </div>
 
     <div class="panel" id="panel-hash">
-      <div class="card-label">Text to hash</div>
-      <textarea id="hash-input" rows="4" placeholder="Enter text..."></textarea>
+      <div class="card-label" data-i18n="hash.inputLabel">Text to hash</div>
+      <textarea id="hash-input" rows="4" data-i18n-placeholder="hash.placeholder" placeholder="Enter text..."></textarea>
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doHash()">⚡ Generate Hashes</button>
-        <button class="btn btn-secondary" onclick="document.getElementById('hash-input').value='';document.getElementById('hash-results').innerHTML=''">Clear</button>
+        <button class="btn btn-primary" onclick="doHash()">⚡ <span data-i18n="hash.generate">Generate Hashes</span></button>
+        <button class="btn btn-secondary" onclick="document.getElementById('hash-input').value='';document.getElementById('hash-results').innerHTML=''" data-i18n="common.clear">Clear</button>
       </div>
       <div id="hash-results" style="margin-top:14px;display:flex;flex-direction:column;gap:10px"></div>
     </div>
 
     <div class="panel" id="panel-uuid">
-      <div class="card-label">Quantity</div>
+      <div class="card-label" data-i18n="uuid.quantityLabel">Quantity</div>
       <input type="number" id="uuid-qty" value="5" min="1" max="20" style="width:120px;resize:none">
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doUuid()">⚡ Generate UUIDs</button>
-        <button class="btn btn-secondary" onclick="document.getElementById('uuid-list').innerHTML=''">Clear</button>
+        <button class="btn btn-primary" onclick="doUuid()">⚡ <span data-i18n="uuid.generate">Generate UUIDs</span></button>
+        <button class="btn btn-secondary" onclick="document.getElementById('uuid-list').innerHTML=''" data-i18n="common.clear">Clear</button>
       </div>
       <div class="uuid-list" id="uuid-list"></div>
     </div>
 
     <div class="panel" id="panel-jwt">
-      <div class="card-label">JWT Token</div>
-      <textarea id="jwt-input" rows="5" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."></textarea>
+      <div class="card-label" data-i18n="jwt.inputLabel">JWT Token</div>
+      <textarea id="jwt-input" rows="5" data-i18n-placeholder="jwt.placeholder" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."></textarea>
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doJwt()">⚡ Decode</button>
-        <button class="btn btn-secondary" onclick="clearJwt()">Clear</button>
+        <button class="btn btn-primary" onclick="doJwt()">⚡ <span data-i18n="common.decode">Decode</span></button>
+        <button class="btn btn-secondary" onclick="clearJwt()" data-i18n="common.clear">Clear</button>
       </div>
       <div id="jwt-results" style="margin-top:14px"></div>
     </div>
@@ -573,28 +571,28 @@
     <div class="panel" id="panel-timestamp">
       <div class="grid-2">
         <div class="card">
-          <div class="card-label">Unix → Date</div>
+          <div class="card-label" data-i18n="ts.unixToDate">Unix → Date</div>
           <input type="number" id="ts-unix" placeholder="1711490400" oninput="tsFromUnix()">
           <div class="ts-grid" id="ts-from-results"></div>
         </div>
         <div class="card">
-          <div class="card-label">Date → Unix</div>
-          <input type="text" id="ts-date" placeholder="2024-03-27 12:00:00" oninput="tsToUnix()">
+          <div class="card-label" data-i18n="ts.dateToUnix">Date → Unix</div>
+          <input type="text" id="ts-date" data-i18n-placeholder="ts.datePlaceholder" placeholder="2024-03-27 12:00:00" oninput="tsToUnix()">
           <div class="ts-grid" id="ts-to-results"></div>
         </div>
       </div>
       <div class="card" style="margin-top:16px">
-        <div class="card-label">⏱ Now</div>
+        <div class="card-label" data-i18n="ts.now">⏱ Now</div>
         <div class="ts-grid" id="ts-now"></div>
-        <button class="btn btn-secondary" style="margin-top:12px" onclick="updateNow()">↻ Refresh</button>
+        <button class="btn btn-secondary" style="margin-top:12px" onclick="updateNow()" data-i18n="ts.refresh">↻ Refresh</button>
       </div>
     </div>
 
     <div class="panel" id="panel-color">
       <div class="grid-2">
         <div>
-          <div class="card-label">Color (HEX, RGB or HSL)</div>
-          <input type="text" id="color-input" placeholder="#7c5cfc ou rgb(124,92,252)" oninput="doColor()">
+          <div class="card-label" data-i18n="color.inputLabel">Color (HEX, RGB or HSL)</div>
+          <input type="text" id="color-input" data-i18n-placeholder="color.placeholder" placeholder="#7c5cfc or rgb(124,92,252)" oninput="doColor()">
           <div class="color-preview" id="color-preview" style="background:#7c5cfc;margin-top:12px"></div>
           <div class="swatch-grid" id="swatches"></div>
         </div>
@@ -605,21 +603,21 @@
     <div class="panel" id="panel-lorem">
       <div style="display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap">
         <div>
-          <div class="card-label">Type</div>
+          <div class="card-label" data-i18n="lorem.typeLabel">Type</div>
           <select id="lorem-type" style="width:160px">
-            <option value="words">Words</option>
-            <option value="sentences" selected>Sentences</option>
-            <option value="paragraphs">Paragraphs</option>
+            <option value="words" data-i18n="lorem.words">Words</option>
+            <option value="sentences" selected data-i18n="lorem.sentences">Sentences</option>
+            <option value="paragraphs" data-i18n="lorem.paragraphs">Paragraphs</option>
           </select>
         </div>
         <div>
-          <div class="card-label">Quantity</div>
+          <div class="card-label" data-i18n="lorem.quantityLabel">Quantity</div>
           <input type="number" id="lorem-qty" value="3" min="1" max="20" style="width:90px;resize:none">
         </div>
-        <button class="btn btn-primary" onclick="doLorem()">⚡ Generate</button>
+        <button class="btn btn-primary" onclick="doLorem()">⚡ <span data-i18n="common.generate">Generate</span></button>
       </div>
       <div class="output lorem-output" id="lorem-out" style="margin-top:16px;color:var(--text)">
-        <button class="copy-btn" onclick="copyOut('lorem-out')">copy</button>
+        <button class="copy-btn" onclick="copyOut('lorem-out')" data-i18n="common.copy">copy</button>
         <span></span>
       </div>
     </div>
@@ -627,52 +625,37 @@
     <div class="panel" id="panel-diff">
       <div class="grid-2">
         <div>
-          <div class="card-label">Text A</div>
-          <textarea id="diff-a" rows="10" placeholder="Original text..."></textarea>
+          <div class="card-label" data-i18n="diff.textA">Text A</div>
+          <textarea id="diff-a" rows="10" data-i18n-placeholder="diff.originalPlaceholder" placeholder="Original text..."></textarea>
         </div>
         <div>
-          <div class="card-label">Text B</div>
-          <textarea id="diff-b" rows="10" placeholder="Modified text..."></textarea>
+          <div class="card-label" data-i18n="diff.textB">Text B</div>
+          <textarea id="diff-b" rows="10" data-i18n-placeholder="diff.modifiedPlaceholder" placeholder="Modified text..."></textarea>
         </div>
       </div>
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doDiff()">⚡ Compare</button>
-        <button class="btn btn-secondary" onclick="document.getElementById('diff-a').value='';document.getElementById('diff-b').value='';document.getElementById('diff-out').innerHTML=''">Clear</button>
+        <button class="btn btn-primary" onclick="doDiff()">⚡ <span data-i18n="diff.compare">Compare</span></button>
+        <button class="btn btn-secondary" onclick="document.getElementById('diff-a').value='';document.getElementById('diff-b').value='';document.getElementById('diff-out').innerHTML=''" data-i18n="common.clear">Clear</button>
       </div>
       <div style="margin-top:14px;display:flex;gap:14px;font-size:12px">
-        <span class="badge badge-green">+ added</span>
-        <span class="badge badge-red">- removed</span>
+        <span class="badge badge-green" data-i18n="diff.added">+ added</span>
+        <span class="badge badge-red" data-i18n="diff.removed">- removed</span>
       </div>
       <div class="output" id="diff-out" style="color:var(--text);margin-top:10px;line-height:1.8"></div>
     </div>
 
     <div class="panel" id="panel-counter">
-      <div class="card-label">Text to analyze</div>
-      <textarea id="counter-input" rows="10" placeholder="Paste your text here..." oninput="doCounter()"></textarea>
+      <div class="card-label" data-i18n="counter.inputLabel">Text to analyze</div>
+      <textarea id="counter-input" rows="10" data-i18n-placeholder="counter.placeholder" placeholder="Paste your text here..." oninput="doCounter()"></textarea>
       <div class="grid-3" id="counter-results" style="margin-top:16px"></div>
     </div>
 
   </div>
 </div>
 
+<script src="locales.js"></script>
 <script>
-// NAV - Fix: using double quotes to allow single quote in string
-const toolInfo = {
-  home: ["🏠 Alerok's DevBox", "// select a tool from the sidebar"],
-  base64: ['🔤 Base64', '// encode and decode Base64'],
-  url: ['🔗 URL Encode/Decode', '// encode and decode URLs'],
-  json: ['{ } JSON Formatter', '// format, validate and minify JSON'],
-  case: ['Aa Case Converter', '// convert between naming conventions'],
-  regex: ['✱ Regex Tester', '// test regular expressions with live highlight'],
-  hash: ['🔐 Hash Generator', '// MD5, SHA-1, SHA-256, SHA-512'],
-  uuid: ['🆔 UUID Generator', '// random UUID v4 generator'],
-  jwt: ['🪙 JWT Decoder', '// decode JWT tokens without verifying signature'],
-  timestamp: ['⏱ Timestamp Converter', '// convert between Unix timestamp and date'],
-  color: ['🎨 Color Converter', '// convert between HEX, RGB and HSL'],
-  lorem: ['📝 Lorem Ipsum', '// placeholder text generator'],
-  diff: ['⚡ Text Diff', '// compare two texts line by line'],
-  counter: ['🔢 Text Counter', '// words, characters, lines and more'],
-};
+const toolKeys = ['home','base64','url','json','case','regex','hash','uuid','jwt','timestamp','color','lorem','diff','counter'];
 
 let currentTool = 'home';
 
@@ -686,9 +669,8 @@ function show(tool, el) {
       if (n.textContent.toLowerCase().includes(tool.toLowerCase().slice(0,4))) n.classList.add('active');
     });
   }
-  const info = toolInfo[tool] || toolInfo.home;
-  document.getElementById('topTitle').textContent = info[0];
-  document.getElementById('topDesc').textContent = info[1];
+  document.getElementById('topTitle').textContent = t(`tool.${tool}.title`);
+  document.getElementById('topDesc').textContent = t(`tool.${tool}.desc`);
   currentTool = tool;
   if (tool === 'timestamp') updateNow();
   if (tool === 'color') initColor();
@@ -724,10 +706,10 @@ function clearField(inputId, outId) {
 
 function copyOut(id) {
   const el = document.getElementById(id);
-  const text = el.querySelector('span') ? el.querySelector('span').textContent : el.innerText.replace('copy','').trim();
+  const text = el.querySelector('span') ? el.querySelector('span').textContent : el.innerText.replace(t('common.copy'),'').trim();
   navigator.clipboard.writeText(text).then(() => {
     const btn = el.querySelector('.copy-btn');
-    if (btn) { btn.textContent = '✓ copied'; setTimeout(() => btn.textContent = 'copy', 1500); }
+    if (btn) { btn.textContent = t('common.copied'); setTimeout(() => btn.textContent = t('common.copy'), 1500); }
   });
 }
 
@@ -735,19 +717,19 @@ function copyOut(id) {
 function doBase64Enc() {
   const v = document.getElementById('b64-input').value;
   try { setOut('b64-out', btoa(unescape(encodeURIComponent(v)))); }
-  catch(e) { setOut('b64-out', 'Error: ' + e.message); }
+  catch(e) { setOut('b64-out', t('common.error') + ': ' + e.message); }
 }
 function doBase64Dec() {
   const v = document.getElementById('b64-d-input').value;
   try { setOut('b64-d-out', decodeURIComponent(escape(atob(v)))); }
-  catch(e) { setOut('b64-d-out', 'Error: invalid Base64'); }
+  catch(e) { setOut('b64-d-out', t('base64.errorInvalid')); }
 }
 
 // URL
 function doUrlEnc() { setOut('url-out', encodeURIComponent(document.getElementById('url-input').value)); }
 function doUrlDec() {
   try { setOut('url-d-out', decodeURIComponent(document.getElementById('url-d-input').value)); }
-  catch(e) { setOut('url-d-out', 'Error: invalid URL'); }
+  catch(e) { setOut('url-d-out', t('url.errorInvalid')); }
 }
 
 // JSON
@@ -761,19 +743,19 @@ function doJsonFormat() {
     const pre = document.createElement('span');
     pre.innerHTML = syntaxHighlight(JSON.stringify(parsed, null, 2));
     el.appendChild(pre);
-    document.getElementById('json-status-label').innerHTML = 'Output <span class="badge badge-green">✓ válido</span>';
+    document.getElementById('json-status-label').innerHTML = t('common.output') + ' <span class="badge badge-green">' + t('json.valid') + '</span>';
   } catch(e) {
-    setOut('json-out', 'Error: ' + e.message);
-    document.getElementById('json-status-label').innerHTML = 'Output <span class="badge badge-red">✗ inválido</span>';
+    setOut('json-out', t('common.error') + ': ' + e.message);
+    document.getElementById('json-status-label').innerHTML = t('common.output') + ' <span class="badge badge-red">' + t('json.invalid') + '</span>';
   }
 }
 function doJsonMinify() {
   try {
     const parsed = JSON.parse(document.getElementById('json-input').value);
     setOut('json-out', JSON.stringify(parsed));
-    document.getElementById('json-status-label').innerHTML = 'Output <span class="badge badge-green">✓ minificado</span>';
+    document.getElementById('json-status-label').innerHTML = t('common.output') + ' <span class="badge badge-green">' + t('json.minified') + '</span>';
   } catch(e) {
-    setOut('json-out', 'Error: ' + e.message);
+    setOut('json-out', t('common.error') + ': ' + e.message);
   }
 }
 function syntaxHighlight(json) {
@@ -789,7 +771,7 @@ function syntaxHighlight(json) {
 
 function makeJsonTree(obj, copyText) {
   const json = JSON.stringify(obj, null, 2);
-  return `<div class="json-tree"><button class="copy-btn" onclick="navigator.clipboard.writeText(${JSON.stringify(json)});this.textContent='✓';setTimeout(()=>this.textContent='copy',1500)">copy</button>${syntaxHighlight(json)}</div>`;
+  return `<div class="json-tree"><button class="copy-btn" onclick="navigator.clipboard.writeText(${JSON.stringify(json)});this.textContent='✓';setTimeout(()=>this.textContent=t('common.copy'),1500)">${t('common.copy')}</button>${syntaxHighlight(json)}</div>`;
 }
 
 // CASE
@@ -829,13 +811,13 @@ function doRegex() {
   try {
     const re = new RegExp(pattern, flags);
     const matches = [...text.matchAll(new RegExp(pattern, flags.includes('g') ? flags : flags+'g'))];
-    statusEl.innerHTML = `<span class="badge badge-green">✓ regex válida</span>`;
-    countEl.textContent = `${matches.length} match${matches.length !== 1 ? 'es' : ''}`;
+    statusEl.innerHTML = `<span class="badge badge-green">${t('regex.validRegex')}</span>`;
+    countEl.textContent = `${matches.length} ${matches.length !== 1 ? t('regex.matches') : t('regex.match')}`;
     const highlighted = text.replace(new RegExp(pattern, flags.includes('g') ? flags : flags+'g'),
       m => `<span class="highlight">${m}</span>`);
-    outEl.innerHTML = highlighted || '<span style="color:var(--muted)">sem matches</span>';
+    outEl.innerHTML = highlighted || `<span style="color:var(--muted)">${t('regex.noMatches')}</span>`;
   } catch(e) {
-    statusEl.innerHTML = `<span class="badge badge-red">✗ erro</span>`;
+    statusEl.innerHTML = `<span class="badge badge-red">${t('regex.error')}</span>`;
     countEl.textContent = e.message;
     outEl.innerHTML = '';
   }
@@ -854,7 +836,7 @@ async function doHash() {
     <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">${label}</div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent2);word-break:break-all;display:flex;justify-content:space-between;align-items:center;gap:10px">
       <span>${value}</span>
-      <button onclick="navigator.clipboard.writeText('${value}');this.textContent='✓';setTimeout(()=>this.textContent='copy',1000)" style="background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;flex-shrink:0">copy</button>
+      <button onclick="navigator.clipboard.writeText('${value}');this.textContent='✓';setTimeout(()=>this.textContent=t('common.copy'),1000)" style="background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;flex-shrink:0">${t('common.copy')}</button>
     </div>
   </div>`;
   results.innerHTML += hashItem('MD5', md5hash);
@@ -913,7 +895,7 @@ function doUuid() {
       const r = Math.random()*16|0, v = c==='x' ? r : (r&0x3|0x8);
       return v.toString(16);
     });
-    list.innerHTML += `<div class="uuid-item"><span>${u}</span><button onclick="navigator.clipboard.writeText('${u}');this.textContent='✓';setTimeout(()=>this.textContent='copy',1000)" style="background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600">copy</button></div>`;
+    list.innerHTML += `<div class="uuid-item"><span>${u}</span><button onclick="navigator.clipboard.writeText('${u}');this.textContent='✓';setTimeout(()=>this.textContent=t('common.copy'),1000)" style="background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600">${t('common.copy')}</button></div>`;
   }
 }
 
@@ -923,36 +905,36 @@ function doJwt() {
   const results = document.getElementById('jwt-results');
   try {
     const parts = token.split('.');
-    if (parts.length !== 3) throw new Error('JWT must have 3 parts separated by dots');
+    if (parts.length !== 3) throw new Error(t('jwt.mustHave3Parts'));
     const decode = p => JSON.parse(atob(p.replace(/-/g,'+').replace(/_/g,'/')));
     const header = decode(parts[0]);
     const payload = decode(parts[1]);
     const now = Math.floor(Date.now()/1000);
     const expired = payload.exp && payload.exp < now;
     const expBadge = expired
-      ? '<span class="badge badge-red">⚠ expired</span>'
-      : payload.exp ? '<span class="badge badge-green">✓ valid</span>' : '';
+      ? `<span class="badge badge-red">${t('jwt.expired')}</span>`
+      : payload.exp ? `<span class="badge badge-green">${t('jwt.valid')}</span>` : '';
     const expInfo = payload.exp
       ? `<div style="margin-top:10px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace"><span style="color:var(--muted)">exp →</span><span style="color:var(--accent2)">${new Date(payload.exp*1000).toLocaleString('en-US')}</span></div>` : '';
     results.innerHTML = `
       <div style="display:flex;flex-direction:column;gap:14px">
         <div class="card">
-          <div class="card-label" style="margin-bottom:4px">Header ${expBadge}</div>
+          <div class="card-label" style="margin-bottom:4px">${t('jwt.header')} ${expBadge}</div>
           ${makeJsonTree(header)}
         </div>
         <div class="card">
-          <div class="card-label" style="margin-bottom:4px">Payload</div>
+          <div class="card-label" style="margin-bottom:4px">${t('jwt.payload')}</div>
           ${makeJsonTree(payload)}
           ${expInfo}
         </div>
         <div class="card">
-          <div class="card-label" style="margin-bottom:8px">Signature</div>
+          <div class="card-label" style="margin-bottom:8px">${t('jwt.signature')}</div>
           <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);word-break:break-all;background:var(--code);border:1px solid var(--border);border-radius:10px;padding:14px">${parts[2]}</div>
-          <div style="margin-top:8px;font-size:11px;color:var(--muted)">⚠ Signature not verified (no secret key)</div>
+          <div style="margin-top:8px;font-size:11px;color:var(--muted)">${t('jwt.signatureNotVerified')}</div>
         </div>
       </div>`;
   } catch(e) {
-    results.innerHTML = `<div style="color:var(--accent3);font-family:'JetBrains Mono',monospace;font-size:13px;padding:14px;background:var(--code);border-radius:8px;border:1px solid rgba(255,107,107,0.3)">Error: ${e.message}</div>`;
+    results.innerHTML = `<div style="color:var(--accent3);font-family:'JetBrains Mono',monospace;font-size:13px;padding:14px;background:var(--code);border-radius:8px;border:1px solid rgba(255,107,107,0.3)">${t('common.error')}: ${e.message}</div>`;
   }
 }
 function clearJwt() { document.getElementById('jwt-input').value=''; document.getElementById('jwt-results').innerHTML=''; }
@@ -962,10 +944,10 @@ function updateNow() {
   const now = new Date();
   const unix = Math.floor(now.getTime()/1000);
   document.getElementById('ts-now').innerHTML = `
-    <div class="ts-item"><div class="ts-label">Unix (segundos)</div><div class="ts-value">${unix}</div></div>
-    <div class="ts-item"><div class="ts-label">Unix (ms)</div><div class="ts-value">${now.getTime()}</div></div>
-    <div class="ts-item"><div class="ts-label">ISO 8601</div><div class="ts-value">${now.toISOString()}</div></div>
-    <div class="ts-item"><div class="ts-label">São Paulo (BRT)</div><div class="ts-value">${now.toLocaleString('en-US',{timeZone:'America/Sao_Paulo'})}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.unixSeconds')}</div><div class="ts-value">${unix}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.unixMs')}</div><div class="ts-value">${now.getTime()}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.iso8601')}</div><div class="ts-value">${now.toISOString()}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.saoPaulo')}</div><div class="ts-value">${now.toLocaleString('en-US',{timeZone:'America/Sao_Paulo'})}</div></div>
   `;
 }
 function tsFromUnix() {
@@ -974,29 +956,29 @@ function tsFromUnix() {
   const ms = v.length > 10 ? parseInt(v) : parseInt(v)*1000;
   const d = new Date(ms);
   document.getElementById('ts-from-results').innerHTML = `
-    <div class="ts-item"><div class="ts-label">ISO 8601</div><div class="ts-value">${d.toISOString()}</div></div>
-    <div class="ts-item"><div class="ts-label">São Paulo (BRT)</div><div class="ts-value">${d.toLocaleString('en-US',{timeZone:'America/Sao_Paulo'})}</div></div>
-    <div class="ts-item"><div class="ts-label">UTC</div><div class="ts-value">${d.toUTCString()}</div></div>
-    <div class="ts-item"><div class="ts-label">Relativo</div><div class="ts-value">${timeAgo(d)}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.iso8601')}</div><div class="ts-value">${d.toISOString()}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.saoPaulo')}</div><div class="ts-value">${d.toLocaleString('en-US',{timeZone:'America/Sao_Paulo'})}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.utc')}</div><div class="ts-value">${d.toUTCString()}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.relative')}</div><div class="ts-value">${timeAgo(d)}</div></div>
   `;
 }
 function tsToUnix() {
   const v = document.getElementById('ts-date').value;
   if (!v) { document.getElementById('ts-to-results').innerHTML=''; return; }
   const d = new Date(v);
-  if (isNaN(d)) { document.getElementById('ts-to-results').innerHTML='<div style="color:var(--accent3);font-size:12px">Data inválida</div>'; return; }
+  if (isNaN(d)) { document.getElementById('ts-to-results').innerHTML=`<div style="color:var(--accent3);font-size:12px">${t('ts.invalidDate')}</div>`; return; }
   document.getElementById('ts-to-results').innerHTML = `
-    <div class="ts-item"><div class="ts-label">Unix (segundos)</div><div class="ts-value">${Math.floor(d.getTime()/1000)}</div></div>
-    <div class="ts-item"><div class="ts-label">Unix (ms)</div><div class="ts-value">${d.getTime()}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.unixSeconds')}</div><div class="ts-value">${Math.floor(d.getTime()/1000)}</div></div>
+    <div class="ts-item"><div class="ts-label">${t('ts.unixMs')}</div><div class="ts-value">${d.getTime()}</div></div>
   `;
 }
 function timeAgo(d) {
   const secs = Math.floor((Date.now()-d.getTime())/1000);
-  if (secs < 0) return 'in the future';
-  if (secs < 60) return `${secs} seconds ago`;
-  if (secs < 3600) return `${Math.floor(secs/60)} minutes ago`;
-  if (secs < 86400) return `${Math.floor(secs/3600)} hours ago`;
-  return `${Math.floor(secs/86400)} days ago`;
+  if (secs < 0) return t('ts.inTheFuture');
+  if (secs < 60) return `${secs} ${t('ts.secondsAgo')}`;
+  if (secs < 3600) return `${Math.floor(secs/60)} ${t('ts.minutesAgo')}`;
+  if (secs < 86400) return `${Math.floor(secs/3600)} ${t('ts.hoursAgo')}`;
+  return `${Math.floor(secs/86400)} ${t('ts.daysAgo')}`;
 }
 
 // COLOR
@@ -1050,8 +1032,8 @@ function doColor() {
     </div>`;
     results.innerHTML = fmt('HEX',hexOut)+fmt('RGB',rgbOut)+fmt('HSL',hslOut)+
       `<div style="background:${hexOut};border-radius:8px;padding:14px;display:flex;justify-content:space-between;align-items:center">
-        <span style="color:${contrast};font-weight:700;font-size:13px">Aa Preview</span>
-        <span style="color:${contrast};font-family:'JetBrains Mono',monospace;font-size:11px">${lum>128?'light background':'dark background'}</span>
+        <span style="color:${contrast};font-weight:700;font-size:13px">${t('color.preview')}</span>
+        <span style="color:${contrast};font-family:'JetBrains Mono',monospace;font-size:11px">${lum>128?t('color.light'):t('color.dark')}</span>
       </div>`;
   } catch(e) {}
 }
@@ -1104,31 +1086,31 @@ function doDiff() {
       if (lb !== undefined) html += `<div class="diff-added">+ ${escHtml(lb)}</div>`;
     }
   }
-  out.innerHTML = html || '<span style="color:var(--muted)">sem diferenças</span>';
+  out.innerHTML = html || `<span style="color:var(--muted)">${t('diff.noDifferences')}</span>`;
 }
 function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 // COUNTER
 function doCounter() {
-  const t = document.getElementById('counter-input').value;
-  const chars = t.length;
-  const charsNoSpace = t.replace(/\s/g,'').length;
-  const words = t.trim() ? t.trim().split(/\s+/).length : 0;
-  const lines = t ? t.split('\n').length : 0;
-  const sentences = t.split(/[.!?]+/).filter(s=>s.trim()).length;
-  const paragraphs = t.split(/\n\n+/).filter(p=>p.trim()).length;
-  const unique = new Set(t.toLowerCase().replace(/[^a-záàâãéèêíïóôõöúçñ]/g,' ').trim().split(/\s+/).filter(Boolean)).size;
+  const text = document.getElementById('counter-input').value;
+  const chars = text.length;
+  const charsNoSpace = text.replace(/\s/g,'').length;
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const lines = text ? text.split('\n').length : 0;
+  const sentences = text.split(/[.!?]+/).filter(s=>s.trim()).length;
+  const paragraphs = text.split(/\n\n+/).filter(p=>p.trim()).length;
+  const unique = new Set(text.toLowerCase().replace(/[^a-záàâãéèêíïóôõöúçñ]/g,' ').trim().split(/\s+/).filter(Boolean)).size;
   const readTime = Math.ceil(words/200);
   const stats = [
-    ['Characters', chars],
-    ['Chars (no space)', charsNoSpace],
-    ['Words', words],
-    ['Lines', lines],
-    ['Sentences', sentences],
-    ['Paragraphs', paragraphs],
-    ['Unique words', unique],
-    ['Read time', readTime + ' min'],
-    ['Bytes (UTF-8)', new TextEncoder().encode(t).length],
+    [t('counter.characters'), chars],
+    [t('counter.charsNoSpace'), charsNoSpace],
+    [t('counter.words'), words],
+    [t('counter.lines'), lines],
+    [t('counter.sentences'), sentences],
+    [t('counter.paragraphs'), paragraphs],
+    [t('counter.uniqueWords'), unique],
+    [t('counter.readTime'), readTime + ' min'],
+    [t('counter.bytes'), new TextEncoder().encode(text).length],
   ];
   document.getElementById('counter-results').innerHTML = stats.map(([l,v])=>`
     <div class="card" style="text-align:center;padding:16px">
