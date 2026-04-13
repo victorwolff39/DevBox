@@ -318,9 +318,7 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
     color: var(--accent2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    cursor: pointer;
   }
 
   /* TIMESTAMP */
@@ -706,7 +704,10 @@ function clearField(inputId, outId) {
 
 function copyOut(id) {
   const el = document.getElementById(id);
-  const text = el.querySelector('span') ? el.querySelector('span').textContent : el.innerText.replace(t('common.copy'),'').trim();
+  const jsonLines = el.querySelectorAll('.json-line');
+  const text = jsonLines.length > 0
+    ? Array.from(jsonLines).map(l => l.textContent).join('\n')
+    : el.querySelector('span') ? el.querySelector('span').textContent : el.innerText.replace(t('common.copy'),'').trim();
   navigator.clipboard.writeText(text).then(() => {
     const btn = el.querySelector('.copy-btn');
     if (btn) { btn.textContent = t('common.copied'); setTimeout(() => btn.textContent = t('common.copy'), 1500); }
@@ -895,7 +896,7 @@ function doUuid() {
       const r = Math.random()*16|0, v = c==='x' ? r : (r&0x3|0x8);
       return v.toString(16);
     });
-    list.innerHTML += `<div class="uuid-item"><span>${u}</span><button onclick="navigator.clipboard.writeText('${u}');this.textContent='✓';setTimeout(()=>this.textContent=t('common.copy'),1000)" style="background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600">${t('common.copy')}</button></div>`;
+    list.innerHTML += `<div class="uuid-item" onclick="navigator.clipboard.writeText('${u}');this.style.color='var(--text)';setTimeout(()=>this.style.color='',800)">${u}</div>`;
   }
 }
 
