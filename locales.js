@@ -1,5 +1,9 @@
 const LOCALES = {
   en: {
+    // Logo
+    "logo.title": "⬡ Alerok's DevBox",
+    "logo.subtitle": "v1.0 · dev tools",
+
     // Sidebar
     "nav.home": "Home",
     "nav.textCode": "Text & Code",
@@ -179,6 +183,8 @@ const LOCALES = {
     "diff.modifiedPlaceholder": "Modified text...",
 
     // Brasil
+    "brasil.cpf": "CPF",
+    "brasil.cnpj": "CNPJ",
     "brasil.withPunct": "With punctuation",
     "cpf.quantityLabel": "Quantity",
     "cpf.generate": "Generate CPFs",

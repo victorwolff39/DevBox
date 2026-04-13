@@ -169,7 +169,7 @@
   select { resize: none; cursor: pointer; }
 
   /* BUTTONS */
-  .btn {
+.btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -394,149 +394,149 @@
 
 <aside class="sidebar">
   <div class="logo">
-    <div class="logo-title">⬡ Alerok's DevBox</div>
-    <div class="logo-sub">v1.0 · dev tools</div>
+    <div class="logo-title" data-i18n="logo.title"></div>
+    <div class="logo-sub" data-i18n="logo.subtitle"></div>
   </div>
   <nav class="nav">
-    <div class="nav-group-label" data-i18n="nav.home">Home</div>
-    <div class="nav-item active" onclick="show('home', this)"><span class="icon">🏠</span> <span data-i18n="nav.home">Home</span></div>
+    <div class="nav-group-label" data-i18n="nav.home"></div>
+    <div class="nav-item active" onclick="show('home', this)"><span class="icon">🏠</span> <span data-i18n="nav.home"></span></div>
 
-    <div class="nav-group-label" data-i18n="nav.textCode">Text & Code</div>
-    <div class="nav-item" onclick="show('base64', this)"><span class="icon">🔤</span> <span data-i18n="nav.base64">Base64</span></div>
-    <div class="nav-item" onclick="show('url', this)"><span class="icon">🔗</span> <span data-i18n="nav.url">URL Encode</span></div>
-    <div class="nav-item" onclick="show('json', this)"><span class="icon">{ }</span> <span data-i18n="nav.json">JSON Format</span></div>
-    <div class="nav-item" onclick="show('case', this)"><span class="icon">Aa</span> <span data-i18n="nav.case">Case Converter</span></div>
-    <div class="nav-item" onclick="show('regex', this)"><span class="icon">.*</span> <span data-i18n="nav.regex">Regex Tester</span></div>
+    <div class="nav-group-label" data-i18n="nav.textCode"></div>
+    <div class="nav-item" onclick="show('base64', this)"><span class="icon">🔤</span> <span data-i18n="nav.base64"></span></div>
+    <div class="nav-item" onclick="show('url', this)"><span class="icon">🔗</span> <span data-i18n="nav.url"></span></div>
+    <div class="nav-item" onclick="show('json', this)"><span class="icon">{ }</span> <span data-i18n="nav.json"></span></div>
+    <div class="nav-item" onclick="show('case', this)"><span class="icon">Aa</span> <span data-i18n="nav.case"></span></div>
+    <div class="nav-item" onclick="show('regex', this)"><span class="icon">.*</span> <span data-i18n="nav.regex"></span></div>
 
-    <div class="nav-group-label" data-i18n="nav.hashSecurity">Hash & Security</div>
-    <div class="nav-item" onclick="show('hash', this)"><span class="icon">🔐</span> <span data-i18n="nav.hash">Hash</span></div>
-    <div class="nav-item" onclick="show('uuid', this)"><span class="icon">🆔</span> <span data-i18n="nav.uuid">UUID</span></div>
-    <div class="nav-item" onclick="show('jwt', this)"><span class="icon">🪙</span> <span data-i18n="nav.jwt">JWT Decode</span></div>
+    <div class="nav-group-label" data-i18n="nav.hashSecurity"></div>
+    <div class="nav-item" onclick="show('hash', this)"><span class="icon">🔐</span> <span data-i18n="nav.hash"></span></div>
+    <div class="nav-item" onclick="show('uuid', this)"><span class="icon">🆔</span> <span data-i18n="nav.uuid"></span></div>
+    <div class="nav-item" onclick="show('jwt', this)"><span class="icon">🪙</span> <span data-i18n="nav.jwt"></span></div>
 
-    <div class="nav-group-label" data-i18n="nav.utilities">Utilities</div>
-    <div class="nav-item" onclick="show('timestamp', this)"><span class="icon">⏱</span> <span data-i18n="nav.timestamp">Timestamp</span></div>
-    <div class="nav-item" onclick="show('color', this)"><span class="icon">🎨</span> <span data-i18n="nav.color">Color</span></div>
-    <div class="nav-item" onclick="show('lorem', this)"><span class="icon">📝</span> <span data-i18n="nav.lorem">Lorem Ipsum</span></div>
-    <div class="nav-item" onclick="show('diff', this)"><span class="icon">⚡</span> <span data-i18n="nav.diff">Text Diff</span></div>
-    <div class="nav-item" onclick="show('counter', this)"><span class="icon">🔢</span> <span data-i18n="nav.counter">Counter</span></div>
+    <div class="nav-group-label" data-i18n="nav.utilities"></div>
+    <div class="nav-item" onclick="show('timestamp', this)"><span class="icon">⏱</span> <span data-i18n="nav.timestamp"></span></div>
+    <div class="nav-item" onclick="show('color', this)"><span class="icon">🎨</span> <span data-i18n="nav.color"></span></div>
+    <div class="nav-item" onclick="show('lorem', this)"><span class="icon">📝</span> <span data-i18n="nav.lorem"></span></div>
+    <div class="nav-item" onclick="show('diff', this)"><span class="icon">⚡</span> <span data-i18n="nav.diff"></span></div>
+    <div class="nav-item" onclick="show('counter', this)"><span class="icon">🔢</span> <span data-i18n="nav.counter"></span></div>
 
-    <div class="nav-group-label" data-i18n="nav.brasil">🇧🇷 Brasil</div>
-    <div class="nav-item" onclick="show('brasil', this)"><span class="icon">🪪</span> <span data-i18n="nav.brasil_docs">CPF / CNPJ</span></div>
+    <div class="nav-group-label" data-i18n="nav.brasil"></div>
+    <div class="nav-item" onclick="show('brasil', this)"><span class="icon">🪪</span> <span data-i18n="nav.brasil_docs"></span></div>
   </nav>
 </aside>
 
 <div class="main">
   <div class="topbar">
     <div>
-      <div class="tool-title" id="topTitle" data-i18n="tool.home.title">🏠 Alerok's DevBox</div>
-      <div class="tool-desc" id="topDesc" data-i18n="tool.home.desc">// select a tool from the sidebar</div>
+      <div class="tool-title" id="topTitle" data-i18n="tool.home.title"></div>
+      <div class="tool-desc" id="topDesc" data-i18n="tool.home.desc"></div>
     </div>
   </div>
 
   <div class="content">
 
     <div class="panel active" id="panel-home">
-      <p style="color:var(--muted);font-size:13px;margin-bottom:24px;font-family:'JetBrains Mono',monospace;" data-i18n="home.subtitle">// 15 tools for your everyday dev workflow</p>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:24px;font-family:'JetBrains Mono',monospace;" data-i18n="home.subtitle"></p>
       <div class="home-cards">
-        <div class="home-card" onclick="show('base64',null)"><div class="home-card-icon">🔤</div><div class="home-card-title" data-i18n="nav.base64">Base64</div><div class="home-card-desc" data-i18n="home.base64.desc">Encode and decode Base64</div></div>
-        <div class="home-card" onclick="show('url',null)"><div class="home-card-icon">🔗</div><div class="home-card-title" data-i18n="nav.url">URL Encode</div><div class="home-card-desc" data-i18n="home.url.desc">Encode and decode URLs</div></div>
-        <div class="home-card" onclick="show('json',null)"><div class="home-card-icon">{ }</div><div class="home-card-title" data-i18n="nav.json">JSON Format</div><div class="home-card-desc" data-i18n="home.json.desc">Format and validate JSON</div></div>
-        <div class="home-card" onclick="show('case',null)"><div class="home-card-icon">Aa</div><div class="home-card-title" data-i18n="nav.case">Case Converter</div><div class="home-card-desc" data-i18n="home.case.desc">camelCase, snake_case and more</div></div>
-        <div class="home-card" onclick="show('regex',null)"><div class="home-card-icon">.*</div><div class="home-card-title" data-i18n="nav.regex">Regex Tester</div><div class="home-card-desc" data-i18n="home.regex.desc">Test regular expressions</div></div>
-        <div class="home-card" onclick="show('hash',null)"><div class="home-card-icon">🔐</div><div class="home-card-title" data-i18n="nav.hash">Hash</div><div class="home-card-desc" data-i18n="home.hash.desc">MD5, SHA-1, SHA-256</div></div>
-        <div class="home-card" onclick="show('uuid',null)"><div class="home-card-icon">🆔</div><div class="home-card-title" data-i18n="nav.uuid">UUID</div><div class="home-card-desc" data-i18n="home.uuid.desc">UUID v4 generator</div></div>
-        <div class="home-card" onclick="show('jwt',null)"><div class="home-card-icon">🪙</div><div class="home-card-title" data-i18n="nav.jwt">JWT Decode</div><div class="home-card-desc" data-i18n="home.jwt.desc">Decode JWT tokens</div></div>
-        <div class="home-card" onclick="show('timestamp',null)"><div class="home-card-icon">⏱</div><div class="home-card-title" data-i18n="nav.timestamp">Timestamp</div><div class="home-card-desc" data-i18n="home.timestamp.desc">Convert Unix timestamps</div></div>
-        <div class="home-card" onclick="show('color',null)"><div class="home-card-icon">🎨</div><div class="home-card-title" data-i18n="nav.color">Color</div><div class="home-card-desc" data-i18n="home.color.desc">HEX, RGB, HSL converter</div></div>
-        <div class="home-card" onclick="show('lorem',null)"><div class="home-card-icon">📝</div><div class="home-card-title" data-i18n="nav.lorem">Lorem Ipsum</div><div class="home-card-desc" data-i18n="home.lorem.desc">Placeholder text generator</div></div>
-        <div class="home-card" onclick="show('diff',null)"><div class="home-card-icon">⚡</div><div class="home-card-title" data-i18n="nav.diff">Text Diff</div><div class="home-card-desc" data-i18n="home.diff.desc">Compare two texts</div></div>
-        <div class="home-card" onclick="show('brasil',null)"><div class="home-card-icon">🇧🇷</div><div class="home-card-title" data-i18n="nav.brasil_docs">CPF / CNPJ</div><div class="home-card-desc" data-i18n="home.brasil.desc">Brazilian document generator</div></div>
+        <div class="home-card" onclick="show('base64',null)"><div class="home-card-icon">🔤</div><div class="home-card-title" data-i18n="nav.base64"></div><div class="home-card-desc" data-i18n="home.base64.desc"></div></div>
+        <div class="home-card" onclick="show('url',null)"><div class="home-card-icon">🔗</div><div class="home-card-title" data-i18n="nav.url"></div><div class="home-card-desc" data-i18n="home.url.desc"></div></div>
+        <div class="home-card" onclick="show('json',null)"><div class="home-card-icon">{ }</div><div class="home-card-title" data-i18n="nav.json"></div><div class="home-card-desc" data-i18n="home.json.desc"></div></div>
+        <div class="home-card" onclick="show('case',null)"><div class="home-card-icon">Aa</div><div class="home-card-title" data-i18n="nav.case"></div><div class="home-card-desc" data-i18n="home.case.desc"></div></div>
+        <div class="home-card" onclick="show('regex',null)"><div class="home-card-icon">.*</div><div class="home-card-title" data-i18n="nav.regex"></div><div class="home-card-desc" data-i18n="home.regex.desc"></div></div>
+        <div class="home-card" onclick="show('hash',null)"><div class="home-card-icon">🔐</div><div class="home-card-title" data-i18n="nav.hash"></div><div class="home-card-desc" data-i18n="home.hash.desc"></div></div>
+        <div class="home-card" onclick="show('uuid',null)"><div class="home-card-icon">🆔</div><div class="home-card-title" data-i18n="nav.uuid"></div><div class="home-card-desc" data-i18n="home.uuid.desc"></div></div>
+        <div class="home-card" onclick="show('jwt',null)"><div class="home-card-icon">🪙</div><div class="home-card-title" data-i18n="nav.jwt"></div><div class="home-card-desc" data-i18n="home.jwt.desc"></div></div>
+        <div class="home-card" onclick="show('timestamp',null)"><div class="home-card-icon">⏱</div><div class="home-card-title" data-i18n="nav.timestamp"></div><div class="home-card-desc" data-i18n="home.timestamp.desc"></div></div>
+        <div class="home-card" onclick="show('color',null)"><div class="home-card-icon">🎨</div><div class="home-card-title" data-i18n="nav.color"></div><div class="home-card-desc" data-i18n="home.color.desc"></div></div>
+        <div class="home-card" onclick="show('lorem',null)"><div class="home-card-icon">📝</div><div class="home-card-title" data-i18n="nav.lorem"></div><div class="home-card-desc" data-i18n="home.lorem.desc"></div></div>
+        <div class="home-card" onclick="show('diff',null)"><div class="home-card-icon">⚡</div><div class="home-card-title" data-i18n="nav.diff"></div><div class="home-card-desc" data-i18n="home.diff.desc"></div></div>
+        <div class="home-card" onclick="show('brasil',null)"><div class="home-card-icon">🇧🇷</div><div class="home-card-title" data-i18n="nav.brasil_docs"></div><div class="home-card-desc" data-i18n="home.brasil.desc"></div></div>
       </div>
     </div>
 
     <div class="panel" id="panel-base64">
       <div class="tabs">
-        <div class="tab active" id="b64-enc-tab" onclick="switchTab('b64','enc')" data-i18n="common.encode">Encode</div>
-        <div class="tab" id="b64-dec-tab" onclick="switchTab('b64','dec')" data-i18n="common.decode">Decode</div>
+        <div class="tab active" id="b64-enc-tab" onclick="switchTab('b64','enc')" data-i18n="common.encode"></div>
+        <div class="tab" id="b64-dec-tab" onclick="switchTab('b64','dec')" data-i18n="common.decode"></div>
       </div>
       <div id="b64-enc">
-        <div class="card-label" data-i18n="base64.inputLabel">Input text</div>
-        <textarea id="b64-input" rows="6" data-i18n-placeholder="base64.inputPlaceholder" placeholder="Enter text to encode as Base64..."></textarea>
+        <div class="card-label" data-i18n="base64.inputLabel"></div>
+        <textarea id="b64-input" rows="6" data-i18n-placeholder="base64.inputPlaceholder"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doBase64Enc()">⚡ <span data-i18n="common.encode">Encode</span></button>
-          <button class="btn btn-secondary" onclick="clearField('b64-input','b64-out')" data-i18n="common.clear">Clear</button>
+          <button class="btn btn-primary" onclick="doBase64Enc()">⚡ <span data-i18n="common.encode"></span></button>
+          <button class="btn btn-secondary" onclick="clearField('b64-input','b64-out')" data-i18n="common.clear"></button>
         </div>
-        <div class="output" id="b64-out"><button class="copy-btn" onclick="copyOut('b64-out')" data-i18n="common.copy">copy</button><span></span></div>
+        <div class="output" id="b64-out"><button class="copy-btn" onclick="copyOut('b64-out')" data-i18n="common.copy"></button><span></span></div>
       </div>
       <div id="b64-dec" style="display:none">
-        <div class="card-label" data-i18n="base64.encodedLabel">Base64 input</div>
-        <textarea id="b64-d-input" rows="6" data-i18n-placeholder="base64.decodePlaceholder" placeholder="Paste Base64 to decode..."></textarea>
+        <div class="card-label" data-i18n="base64.encodedLabel"></div>
+        <textarea id="b64-d-input" rows="6" data-i18n-placeholder="base64.decodePlaceholder"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doBase64Dec()">⚡ <span data-i18n="common.decode">Decode</span></button>
-          <button class="btn btn-secondary" onclick="clearField('b64-d-input','b64-d-out')" data-i18n="common.clear">Clear</button>
+          <button class="btn btn-primary" onclick="doBase64Dec()">⚡ <span data-i18n="common.decode"></span></button>
+          <button class="btn btn-secondary" onclick="clearField('b64-d-input','b64-d-out')" data-i18n="common.clear"></button>
         </div>
-        <div class="output" id="b64-d-out"><button class="copy-btn" onclick="copyOut('b64-d-out')" data-i18n="common.copy">copy</button><span></span></div>
+        <div class="output" id="b64-d-out"><button class="copy-btn" onclick="copyOut('b64-d-out')" data-i18n="common.copy"></button><span></span></div>
       </div>
     </div>
 
     <div class="panel" id="panel-url">
       <div class="tabs">
-        <div class="tab active" id="url-enc-tab" onclick="switchTab('url','enc')" data-i18n="common.encode">Encode</div>
-        <div class="tab" id="url-dec-tab" onclick="switchTab('url','dec')" data-i18n="common.decode">Decode</div>
+        <div class="tab active" id="url-enc-tab" onclick="switchTab('url','enc')" data-i18n="common.encode"></div>
+        <div class="tab" id="url-dec-tab" onclick="switchTab('url','dec')" data-i18n="common.decode"></div>
       </div>
       <div id="url-enc">
-        <textarea id="url-input" rows="5" data-i18n-placeholder="url.encodePlaceholder" placeholder="https://example.com/search?q=hello world&lang=en"></textarea>
+        <textarea id="url-input" rows="5" data-i18n-placeholder="url.encodePlaceholder"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doUrlEnc()">⚡ <span data-i18n="common.encode">Encode</span></button>
-          <button class="btn btn-secondary" onclick="clearField('url-input','url-out')" data-i18n="common.clear">Clear</button>
+          <button class="btn btn-primary" onclick="doUrlEnc()">⚡ <span data-i18n="common.encode"></span></button>
+          <button class="btn btn-secondary" onclick="clearField('url-input','url-out')" data-i18n="common.clear"></button>
         </div>
-        <div class="output" id="url-out"><button class="copy-btn" onclick="copyOut('url-out')" data-i18n="common.copy">copy</button><span></span></div>
+        <div class="output" id="url-out"><button class="copy-btn" onclick="copyOut('url-out')" data-i18n="common.copy"></button><span></span></div>
       </div>
       <div id="url-dec" style="display:none">
-        <textarea id="url-d-input" rows="5" data-i18n-placeholder="url.decodePlaceholder" placeholder="https%3A%2F%2Fexample.com%3Fq%3Dol%C3%A1%20mundo"></textarea>
+        <textarea id="url-d-input" rows="5" data-i18n-placeholder="url.decodePlaceholder"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doUrlDec()">⚡ <span data-i18n="common.decode">Decode</span></button>
-          <button class="btn btn-secondary" onclick="clearField('url-d-input','url-d-out')" data-i18n="common.clear">Clear</button>
+          <button class="btn btn-primary" onclick="doUrlDec()">⚡ <span data-i18n="common.decode"></span></button>
+          <button class="btn btn-secondary" onclick="clearField('url-d-input','url-d-out')" data-i18n="common.clear"></button>
         </div>
-        <div class="output" id="url-d-out"><button class="copy-btn" onclick="copyOut('url-d-out')" data-i18n="common.copy">copy</button><span></span></div>
+        <div class="output" id="url-d-out"><button class="copy-btn" onclick="copyOut('url-d-out')" data-i18n="common.copy"></button><span></span></div>
       </div>
     </div>
 
     <div class="panel" id="panel-json">
       <div>
-        <div class="card-label" data-i18n="json.inputLabel">JSON input</div>
-        <textarea id="json-input" rows="10" data-i18n-placeholder="json.inputPlaceholder" placeholder='{"name":"John","age":30,"active":true}'></textarea>
+        <div class="card-label" data-i18n="json.inputLabel"></div>
+        <textarea id="json-input" rows="10" data-i18n-placeholder="json.inputPlaceholder"></textarea>
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doJsonFormat()">⚡ <span data-i18n="json.format">Format</span></button>
-          <button class="btn btn-secondary" onclick="doJsonMinify()" data-i18n="json.minify">Minify</button>
-          <button class="btn btn-secondary" onclick="clearField('json-input','json-out')" data-i18n="common.clear">Clear</button>
+          <button class="btn btn-primary" onclick="doJsonFormat()">⚡ <span data-i18n="json.format"></span></button>
+          <button class="btn btn-secondary" onclick="doJsonMinify()" data-i18n="json.minify"></button>
+          <button class="btn btn-secondary" onclick="clearField('json-input','json-out')" data-i18n="common.clear"></button>
         </div>
       </div>
       <div style="margin-top:16px">
-        <div class="card-label" id="json-status-label" data-i18n="common.output">Output</div>
-        <div class="output" style="min-height:200px;color:var(--text)" id="json-out"><button class="copy-btn" onclick="copyOut('json-out')" data-i18n="common.copy">copy</button><span></span></div>
+        <div class="card-label" id="json-status-label" data-i18n="common.output"></div>
+        <div class="output" style="min-height:200px;color:var(--text)" id="json-out"><button class="copy-btn" onclick="copyOut('json-out')" data-i18n="common.copy"></button><span></span></div>
       </div>
     </div>
 
     <div class="panel" id="panel-case">
-      <div class="card-label" data-i18n="case.inputLabel">Input text</div>
-      <textarea id="case-input" rows="4" data-i18n-placeholder="case.placeholder" placeholder="my variable name here..." oninput="doCase()"></textarea>
+      <div class="card-label" data-i18n="case.inputLabel"></div>
+      <textarea id="case-input" rows="4" data-i18n-placeholder="case.placeholder" oninput="doCase()"></textarea>
       <div class="case-grid" id="case-results"></div>
     </div>
 
     <div class="panel" id="panel-regex">
       <div style="display:flex;gap:10px;margin-bottom:14px">
         <div style="flex:1">
-          <div class="card-label" data-i18n="regex.patternLabel">Regular Expression</div>
+          <div class="card-label" data-i18n="regex.patternLabel"></div>
           <input type="text" id="regex-pattern" placeholder="^\d{2}/\d{2}/\d{4}$" oninput="doRegex()">
         </div>
         <div style="width:140px">
-          <div class="card-label" data-i18n="regex.flagsLabel">Flags</div>
+          <div class="card-label" data-i18n="regex.flagsLabel"></div>
           <input type="text" id="regex-flags" placeholder="gi" maxlength="10" oninput="doRegex()" style="font-size:13px">
         </div>
       </div>
-      <div class="card-label" data-i18n="regex.testLabel">Test text</div>
-      <textarea id="regex-text" rows="8" data-i18n-placeholder="regex.testPlaceholder" placeholder="Paste your text here..." oninput="doRegex()"></textarea>
+      <div class="card-label" data-i18n="regex.testLabel"></div>
+      <textarea id="regex-text" rows="8" data-i18n-placeholder="regex.testPlaceholder" oninput="doRegex()"></textarea>
       <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
         <span id="regex-status"></span>
         <span id="regex-count" style="font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace"></span>
@@ -545,31 +545,31 @@
     </div>
 
     <div class="panel" id="panel-hash">
-      <div class="card-label" data-i18n="hash.inputLabel">Text to hash</div>
-      <textarea id="hash-input" rows="4" data-i18n-placeholder="hash.placeholder" placeholder="Enter text..."></textarea>
+      <div class="card-label" data-i18n="hash.inputLabel"></div>
+      <textarea id="hash-input" rows="4" data-i18n-placeholder="hash.placeholder"></textarea>
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doHash()">⚡ <span data-i18n="hash.generate">Generate Hashes</span></button>
-        <button class="btn btn-secondary" onclick="document.getElementById('hash-input').value='';document.getElementById('hash-results').innerHTML=''" data-i18n="common.clear">Clear</button>
+        <button class="btn btn-primary" onclick="doHash()">⚡ <span data-i18n="hash.generate"></span></button>
+        <button class="btn btn-secondary" onclick="document.getElementById('hash-input').value='';document.getElementById('hash-results').innerHTML=''" data-i18n="common.clear"></button>
       </div>
       <div id="hash-results" style="margin-top:14px;display:flex;flex-direction:column;gap:10px"></div>
     </div>
 
     <div class="panel" id="panel-uuid">
-      <div class="card-label" data-i18n="uuid.quantityLabel">Quantity</div>
+      <div class="card-label" data-i18n="uuid.quantityLabel"></div>
       <input type="number" id="uuid-qty" value="1" min="1" max="20" style="width:120px;resize:none">
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doUuid()">⚡ <span data-i18n="uuid.generate">Generate UUIDs</span></button>
-        <button class="btn btn-secondary" onclick="document.getElementById('uuid-list').innerHTML=''" data-i18n="common.clear">Clear</button>
+        <button class="btn btn-primary" onclick="doUuid()">⚡ <span data-i18n="uuid.generate"></span></button>
+        <button class="btn btn-secondary" onclick="document.getElementById('uuid-list').innerHTML=''" data-i18n="common.clear"></button>
       </div>
       <div class="uuid-list" id="uuid-list"></div>
     </div>
 
     <div class="panel" id="panel-jwt">
-      <div class="card-label" data-i18n="jwt.inputLabel">JWT Token</div>
-      <textarea id="jwt-input" rows="5" data-i18n-placeholder="jwt.placeholder" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."></textarea>
+      <div class="card-label" data-i18n="jwt.inputLabel"></div>
+      <textarea id="jwt-input" rows="5" data-i18n-placeholder="jwt.placeholder"></textarea>
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doJwt()">⚡ <span data-i18n="common.decode">Decode</span></button>
-        <button class="btn btn-secondary" onclick="clearJwt()" data-i18n="common.clear">Clear</button>
+        <button class="btn btn-primary" onclick="doJwt()">⚡ <span data-i18n="common.decode"></span></button>
+        <button class="btn btn-secondary" onclick="clearJwt()" data-i18n="common.clear"></button>
       </div>
       <div id="jwt-results" style="margin-top:14px"></div>
     </div>
@@ -577,28 +577,28 @@
     <div class="panel" id="panel-timestamp">
       <div class="grid-2">
         <div class="card">
-          <div class="card-label" data-i18n="ts.unixToDate">Unix → Date</div>
+          <div class="card-label" data-i18n="ts.unixToDate"></div>
           <input type="number" id="ts-unix" placeholder="1711490400" oninput="tsFromUnix()">
           <div class="ts-grid" id="ts-from-results"></div>
         </div>
         <div class="card">
-          <div class="card-label" data-i18n="ts.dateToUnix">Date → Unix</div>
-          <input type="text" id="ts-date" data-i18n-placeholder="ts.datePlaceholder" placeholder="2024-03-27 12:00:00" oninput="tsToUnix()">
+          <div class="card-label" data-i18n="ts.dateToUnix"></div>
+          <input type="text" id="ts-date" data-i18n-placeholder="ts.datePlaceholder" oninput="tsToUnix()">
           <div class="ts-grid" id="ts-to-results"></div>
         </div>
       </div>
       <div class="card" style="margin-top:16px">
-        <div class="card-label" data-i18n="ts.now">⏱ Now</div>
+        <div class="card-label" data-i18n="ts.now"></div>
         <div class="ts-grid" id="ts-now"></div>
-        <button class="btn btn-secondary" style="margin-top:12px" onclick="updateNow()" data-i18n="ts.refresh">↻ Refresh</button>
+        <button class="btn btn-secondary" style="margin-top:12px" onclick="updateNow()" data-i18n="ts.refresh"></button>
       </div>
     </div>
 
     <div class="panel" id="panel-color">
       <div class="grid-2">
         <div>
-          <div class="card-label" data-i18n="color.inputLabel">Color (HEX, RGB or HSL)</div>
-          <input type="text" id="color-input" data-i18n-placeholder="color.placeholder" placeholder="#7c5cfc or rgb(124,92,252)" oninput="doColor()">
+          <div class="card-label" data-i18n="color.inputLabel"></div>
+          <input type="text" id="color-input" data-i18n-placeholder="color.placeholder" oninput="doColor()">
           <div class="color-preview" id="color-preview" style="background:#7c5cfc;margin-top:12px"></div>
           <div class="swatch-grid" id="swatches"></div>
         </div>
@@ -609,21 +609,21 @@
     <div class="panel" id="panel-lorem">
       <div style="display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap">
         <div>
-          <div class="card-label" data-i18n="lorem.typeLabel">Type</div>
+          <div class="card-label" data-i18n="lorem.typeLabel"></div>
           <select id="lorem-type" style="width:160px">
-            <option value="words" data-i18n="lorem.words">Words</option>
-            <option value="sentences" selected data-i18n="lorem.sentences">Sentences</option>
-            <option value="paragraphs" data-i18n="lorem.paragraphs">Paragraphs</option>
+            <option value="words" data-i18n="lorem.words"></option>
+            <option value="sentences" selected data-i18n="lorem.sentences"></option>
+            <option value="paragraphs" data-i18n="lorem.paragraphs"></option>
           </select>
         </div>
         <div>
-          <div class="card-label" data-i18n="lorem.quantityLabel">Quantity</div>
+          <div class="card-label" data-i18n="lorem.quantityLabel"></div>
           <input type="number" id="lorem-qty" value="3" min="1" max="20" style="width:90px;resize:none">
         </div>
-        <button class="btn btn-primary" onclick="doLorem()">⚡ <span data-i18n="common.generate">Generate</span></button>
+        <button class="btn btn-primary" onclick="doLorem()">⚡ <span data-i18n="common.generate"></span></button>
       </div>
       <div class="output lorem-output" id="lorem-out" style="margin-top:16px;color:var(--text)">
-        <button class="copy-btn" onclick="copyOut('lorem-out')" data-i18n="common.copy">copy</button>
+        <button class="copy-btn" onclick="copyOut('lorem-out')" data-i18n="common.copy"></button>
         <span></span>
       </div>
     </div>
@@ -631,54 +631,54 @@
     <div class="panel" id="panel-diff">
       <div class="grid-2">
         <div>
-          <div class="card-label" data-i18n="diff.textA">Text A</div>
-          <textarea id="diff-a" rows="10" data-i18n-placeholder="diff.originalPlaceholder" placeholder="Original text..."></textarea>
+          <div class="card-label" data-i18n="diff.textA"></div>
+          <textarea id="diff-a" rows="10" data-i18n-placeholder="diff.originalPlaceholder"></textarea>
         </div>
         <div>
-          <div class="card-label" data-i18n="diff.textB">Text B</div>
-          <textarea id="diff-b" rows="10" data-i18n-placeholder="diff.modifiedPlaceholder" placeholder="Modified text..."></textarea>
+          <div class="card-label" data-i18n="diff.textB"></div>
+          <textarea id="diff-b" rows="10" data-i18n-placeholder="diff.modifiedPlaceholder"></textarea>
         </div>
       </div>
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="doDiff()">⚡ <span data-i18n="diff.compare">Compare</span></button>
-        <button class="btn btn-secondary" onclick="document.getElementById('diff-a').value='';document.getElementById('diff-b').value='';document.getElementById('diff-out').innerHTML=''" data-i18n="common.clear">Clear</button>
+        <button class="btn btn-primary" onclick="doDiff()">⚡ <span data-i18n="diff.compare"></span></button>
+        <button class="btn btn-secondary" onclick="document.getElementById('diff-a').value='';document.getElementById('diff-b').value='';document.getElementById('diff-out').innerHTML=''" data-i18n="common.clear"></button>
       </div>
       <div style="margin-top:14px;display:flex;gap:14px;font-size:12px">
-        <span class="badge badge-green" data-i18n="diff.added">+ added</span>
-        <span class="badge badge-red" data-i18n="diff.removed">- removed</span>
+        <span class="badge badge-green" data-i18n="diff.added"></span>
+        <span class="badge badge-red" data-i18n="diff.removed"></span>
       </div>
       <div class="output" id="diff-out" style="color:var(--text);margin-top:10px;line-height:1.8"></div>
     </div>
 
     <div class="panel" id="panel-counter">
-      <div class="card-label" data-i18n="counter.inputLabel">Text to analyze</div>
-      <textarea id="counter-input" rows="10" data-i18n-placeholder="counter.placeholder" placeholder="Paste your text here..." oninput="doCounter()"></textarea>
+      <div class="card-label" data-i18n="counter.inputLabel"></div>
+      <textarea id="counter-input" rows="10" data-i18n-placeholder="counter.placeholder" oninput="doCounter()"></textarea>
       <div class="grid-3" id="counter-results" style="margin-top:16px"></div>
     </div>
 
     <div class="panel" id="panel-brasil">
       <div class="tabs">
-        <div class="tab active" id="brasil-cpf-tab" onclick="switchTab('brasil','cpf')">CPF</div>
-        <div class="tab" id="brasil-cnpj-tab" onclick="switchTab('brasil','cnpj')">CNPJ</div>
+        <div class="tab active" id="brasil-cpf-tab" onclick="switchTab('brasil','cpf')" data-i18n="brasil.cpf"></div>
+        <div class="tab" id="brasil-cnpj-tab" onclick="switchTab('brasil','cnpj')" data-i18n="brasil.cnpj"></div>
       </div>
       <div id="brasil-cpf">
-        <div class="card-label" data-i18n="cpf.quantityLabel">Quantity</div>
+        <div class="card-label" data-i18n="cpf.quantityLabel"></div>
         <input type="number" id="cpf-qty" value="1" min="1" max="20" style="width:120px;resize:none">
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doCpf()">⚡ <span data-i18n="cpf.generate">Generate CPFs</span></button>
-          <button class="btn btn-secondary" onclick="document.getElementById('cpf-list').innerHTML=''" data-i18n="common.clear">Clear</button>
+          <button class="btn btn-primary" onclick="doCpf()">⚡ <span data-i18n="cpf.generate"></span></button>
+          <button class="btn btn-secondary" onclick="document.getElementById('cpf-list').innerHTML=''" data-i18n="common.clear"></button>
         </div>
-        <label class="punct-toggle"><input type="checkbox" id="cpf-punct" checked> <span data-i18n="brasil.withPunct">Com pontuação</span></label>
+        <label class="punct-toggle"><input type="checkbox" id="cpf-punct" checked> <span data-i18n="brasil.withPunct"></span></label>
         <div class="uuid-list" id="cpf-list"></div>
       </div>
       <div id="brasil-cnpj" style="display:none">
-        <div class="card-label" data-i18n="cnpj.quantityLabel">Quantity</div>
+        <div class="card-label" data-i18n="cnpj.quantityLabel"></div>
         <input type="number" id="cnpj-qty" value="1" min="1" max="20" style="width:120px;resize:none">
         <div class="btn-row">
-          <button class="btn btn-primary" onclick="doCnpj()">⚡ <span data-i18n="cnpj.generate">Generate CNPJs</span></button>
-          <button class="btn btn-secondary" onclick="document.getElementById('cnpj-list').innerHTML=''" data-i18n="common.clear">Clear</button>
+          <button class="btn btn-primary" onclick="doCnpj()">⚡ <span data-i18n="cnpj.generate"></span></button>
+          <button class="btn btn-secondary" onclick="document.getElementById('cnpj-list').innerHTML=''" data-i18n="common.clear"></button>
         </div>
-        <label class="punct-toggle"><input type="checkbox" id="cnpj-punct" checked> <span data-i18n="brasil.withPunct">With punctuation</span></label>
+        <label class="punct-toggle"><input type="checkbox" id="cnpj-punct" checked> <span data-i18n="brasil.withPunct"></span></label>
         <div class="uuid-list" id="cnpj-list"></div>
       </div>
     </div>
@@ -1211,6 +1211,7 @@ function doCounter() {
 }
 
 // INIT
+setLocale(currentLocale);
 updateNow();
 doCounter();
 </script>
